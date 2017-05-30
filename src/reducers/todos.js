@@ -13,7 +13,7 @@ export default (state = initialState, action = {}) => {
     case 'ADD_TODO':
       return {
         ...state,
-        todos:{[action.todo.id]:action.todo,...state.todos}
+        todos:{...state.todos,[action.todo.id]:action.todo}
       }
     case 'CHANGE_TODO':
       return {
